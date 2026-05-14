@@ -28,3 +28,6 @@ class EvidenceEvent(Base):
     detection_reason = Column(Text, nullable=True)
 
     evidence_hash = Column(String(255), nullable=True)
+
+    recommended_action = Column(Text, nullable=True)
+    signature_difference = Column(Text, nullable=True)
