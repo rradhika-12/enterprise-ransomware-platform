@@ -8,14 +8,16 @@ from sqlalchemy.orm import Session
 from backend.database.db import Base, engine, SessionLocal
 from backend.models.event import EvidenceEvent
 from backend.detection_engine.analyzer import analyze_event
-
+from backend.api.dashboard import router as dashboard_router
 # Create database tables automatically
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
     title="Enterprise Ransomware Early Interception Platform",
     version="1.0.0"
+    
 )
+app.include_router(dashboard_router)
 
 # =========================
 # EVENT SCHEMA
