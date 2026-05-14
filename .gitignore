@@ -1,0 +1,12 @@
+@"
+.venv/
+__pycache__/
+*.pyc
+.env
+node_modules/
+dist/
+build/
+.DS_Store
+logs/
+*.log
+"@ | Set-Content .gitignore
